@@ -36,33 +36,34 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCows = new System.Windows.Forms.TextBox();
+            this.txtSheeps = new System.Windows.Forms.TextBox();
+            this.txtGoats = new System.Windows.Forms.TextBox();
+            this.txtTotalSheeps = new System.Windows.Forms.TextBox();
+            this.txtTotalCows = new System.Windows.Forms.TextBox();
+            this.txtTotalMilk = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtTotalGoats = new System.Windows.Forms.TextBox();
+            this.txtSounds = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSounds);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtGoats);
+            this.groupBox1.Controls.Add(this.txtSheeps);
+            this.groupBox1.Controls.Add(this.txtCows);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(99, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(607, 142);
+            this.groupBox1.Size = new System.Drawing.Size(689, 142);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INPUT";
@@ -83,9 +84,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 22);
+            this.label2.Size = new System.Drawing.Size(159, 22);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Number of Sheep";
+            this.label2.Text = "Number of Sheeps";
             // 
             // label3
             // 
@@ -98,14 +99,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtTotalGoats);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txtTotalSheeps);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txtTotalCows);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtTotalMilk);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(99, 222);
@@ -142,66 +142,61 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Total Milk";
             // 
-            // textBox1
+            // txtCows
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 28);
-            this.textBox1.TabIndex = 3;
+            this.txtCows.Location = new System.Drawing.Point(254, 22);
+            this.txtCows.Name = "txtCows";
+            this.txtCows.Size = new System.Drawing.Size(169, 28);
+            this.txtCows.TabIndex = 3;
+            this.txtCows.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtSheeps
             // 
-            this.textBox2.Location = new System.Drawing.Point(254, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 28);
-            this.textBox2.TabIndex = 4;
+            this.txtSheeps.Location = new System.Drawing.Point(254, 55);
+            this.txtSheeps.Name = "txtSheeps";
+            this.txtSheeps.Size = new System.Drawing.Size(169, 28);
+            this.txtSheeps.TabIndex = 4;
             // 
-            // textBox3
+            // txtGoats
             // 
-            this.textBox3.Location = new System.Drawing.Point(253, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 28);
-            this.textBox3.TabIndex = 5;
+            this.txtGoats.Location = new System.Drawing.Point(253, 89);
+            this.txtGoats.Name = "txtGoats";
+            this.txtGoats.Size = new System.Drawing.Size(169, 28);
+            this.txtGoats.TabIndex = 5;
             // 
-            // textBox4
+            // txtTotalSheeps
             // 
-            this.textBox4.Location = new System.Drawing.Point(253, 89);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(169, 28);
-            this.textBox4.TabIndex = 8;
+            this.txtTotalSheeps.Location = new System.Drawing.Point(253, 89);
+            this.txtTotalSheeps.Name = "txtTotalSheeps";
+            this.txtTotalSheeps.ReadOnly = true;
+            this.txtTotalSheeps.Size = new System.Drawing.Size(169, 28);
+            this.txtTotalSheeps.TabIndex = 8;
             // 
-            // textBox5
+            // txtTotalCows
             // 
-            this.textBox5.Location = new System.Drawing.Point(254, 55);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 28);
-            this.textBox5.TabIndex = 7;
+            this.txtTotalCows.Location = new System.Drawing.Point(254, 55);
+            this.txtTotalCows.Name = "txtTotalCows";
+            this.txtTotalCows.ReadOnly = true;
+            this.txtTotalCows.Size = new System.Drawing.Size(169, 28);
+            this.txtTotalCows.TabIndex = 7;
             // 
-            // textBox6
+            // txtTotalMilk
             // 
-            this.textBox6.Location = new System.Drawing.Point(254, 22);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(169, 28);
-            this.textBox6.TabIndex = 6;
+            this.txtTotalMilk.Location = new System.Drawing.Point(254, 22);
+            this.txtTotalMilk.Name = "txtTotalMilk";
+            this.txtTotalMilk.ReadOnly = true;
+            this.txtTotalMilk.Size = new System.Drawing.Size(169, 28);
+            this.txtTotalMilk.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(474, 49);
+            this.button1.Location = new System.Drawing.Point(514, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 47);
             this.button1.TabIndex = 6;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(474, 70);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 47);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Sound";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -212,12 +207,20 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Total Goats";
             // 
-            // textBox7
+            // txtTotalGoats
             // 
-            this.textBox7.Location = new System.Drawing.Point(253, 133);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(169, 28);
-            this.textBox7.TabIndex = 10;
+            this.txtTotalGoats.Location = new System.Drawing.Point(253, 133);
+            this.txtTotalGoats.Name = "txtTotalGoats";
+            this.txtTotalGoats.ReadOnly = true;
+            this.txtTotalGoats.Size = new System.Drawing.Size(169, 28);
+            this.txtTotalGoats.TabIndex = 10;
+            // 
+            // txtSounds
+            // 
+            this.txtSounds.Location = new System.Drawing.Point(438, 89);
+            this.txtSounds.Name = "txtSounds";
+            this.txtSounds.Size = new System.Drawing.Size(245, 28);
+            this.txtSounds.TabIndex = 7;
             // 
             // Form1
             // 
@@ -243,19 +246,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGoats;
+        private System.Windows.Forms.TextBox txtSheeps;
+        private System.Windows.Forms.TextBox txtCows;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTotalSheeps;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTotalCows;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTotalMilk;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtTotalGoats;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSounds;
     }
 }
 
